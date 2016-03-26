@@ -1,0 +1,62 @@
+﻿<s:SurfaceWindow x:Class="CameraVisualizations.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="http://schemas.microsoft.com/surface/2008"
+        Title="Window1" Height="800" Width="1200" WindowStyle="none" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Icon="images/globe.ico" xmlns:my="http://schemas.microsoft.com/surface/2008">
+    <Window.Background>
+        <SolidColorBrush />
+    </Window.Background>
+    <Grid>
+        <Rectangle Height="737" HorizontalAlignment="Left" Margin="12,12,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="1154" RadiusX="9" RadiusY="9"
+                   MouseLeftButtonDown="moveWindow">
+            <Rectangle.Effect>
+                <DropShadowEffect x:Name="DS6" BlurRadius="17" ShadowDepth="0" Color="Black"></DropShadowEffect>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#F3000000" Offset="0" />
+                    <GradientStop Color="#DB555555" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <s:SurfaceButton Name="WorldMap" Height="144" HorizontalAlignment="Left" Margin="208,290,0,0" VerticalAlignment="Top" Width="199" Click="WorldMap_Click"
+                BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/world.png" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton Name="CanadaMap" Height="144" HorizontalAlignment="Left" Margin="472,290,0,0" VerticalAlignment="Top" Width="199"
+                BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/canada.png" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton Name="battlefield" Height="144" HorizontalAlignment="Left" Margin="748,290,0,0" VerticalAlignment="Top" Width="199"
+                BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="battlefield_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/battlefield.png" />
+                </s:SurfaceButton.Background>
+            </s:SurfaceButton>
+        <TextBlock Height="69" HorizontalAlignment="Left" Margin="208,109,0,0" Name="textBlock1" Text="Please choose a lesson:" VerticalAlignment="Top" Width="716" Foreground="White" FontSize="60" FontFamily="Sakkal Majalla" />
+        <TextBlock Height="58" HorizontalAlignment="Left" Margin="262,440,0,0" Name="textBlock2" Text="World" VerticalAlignment="Top" Width="145" Foreground="White" FontSize="30" />
+        <TextBlock FontSize="30" Foreground="White" Height="58" HorizontalAlignment="Left" Margin="526,440,0,0" Name="textBlock3" Text="Canada" VerticalAlignment="Top" Width="145" />
+        <TextBlock FontSize="30" Foreground="White" Height="90" HorizontalAlignment="Left" Margin="770,440,0,0" Name="textBlock4" Text="Battlefield Simulation" VerticalAlignment="Top" Width="145" />
+        <!--<s:SurfaceButton Name="closeButton" Height="90" HorizontalAlignment="Right" Margin="0,12,23,0" VerticalAlignment="Top" Width="90" Click="closeButton_Click"
+                BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/close.png" />
+                </s:SurfaceButton.Background>
+            </s:SurfaceButton>-->
+        <s:SurfaceButton Name="minimizeButton" Height="102" HorizontalAlignment="Left" Margin="963,0,0,0" VerticalAlignment="Top" Width="96" Click="minimizeButton_Click"
+                BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/minimize.png" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+        <s:SurfaceButton Height="86" HorizontalAlignment="Left" Margin="12,16,0,0" Name="configButton" VerticalAlignment="Top" Width="77" Click="configButton_Click">
+            <s:SurfaceButton.Background>
+                <ImageBrush ImageSource="/CameraVisualizations;component/images/config-icon.png" />
+            </s:SurfaceButton.Background>
+        </s:SurfaceButton>
+    </Grid>
+</s:SurfaceWindow>
